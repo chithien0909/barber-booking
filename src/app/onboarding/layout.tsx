@@ -1,7 +1,6 @@
-import './globals.css'
 import type { Metadata } from 'next'
+import '../globals.css'
 import { Inter } from 'next/font/google'
-import Header from '@/components/layout/Header'
 import { OnboardingProvider } from '@/providers/OnboardingProvider'
 
 const inter = Inter({ 
@@ -10,11 +9,11 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Barber Booking App',
-  description: 'Book your favorite barber with ease',
+  title: 'Onboarding - Barber Booking App',
+  description: 'Get started with the Barber Booking App',
 }
 
-export default function RootLayout({
+export default function OnboardingLayout({
   children,
 }: {
   children: React.ReactNode
@@ -23,12 +22,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} font-sans antialiased`}>
         <OnboardingProvider>
-          <Header />
-          <main className="min-h-screen bg-background-light">
-            {children}
-          </main>
+          {children}
         </OnboardingProvider>
       </body>
     </html>
   )
-}
+} 

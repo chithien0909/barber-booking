@@ -1,24 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Barber Booking App
+
+A modern booking application for barber shops built with Next.js and TypeScript.
+
+## Features
+
+- Browse and search for barbers
+- View barber profiles and services
+- Book appointments with your favorite barbers
+- Manage your upcoming and past appointments
+- User profile and preferences management
+- Onboarding experience for new users
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+pnpm install
+```
+
+Then, run the development server:
+
+```bash
+pnpm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Troubleshooting
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### File Watcher Limit Issue
+
+If you encounter an error like:
+
+```
+OS file watch limit reached
+```
+
+This happens because the system has a limit on the number of files that can be watched by a user. You can fix this by increasing the limit with:
+
+```bash
+# For Linux
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
+## Technology Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- React Context API for state management
+
+## Project Structure
+
+- `app/` - Next.js application routes
+- `components/` - Reusable React components
+- `providers/` - React context providers
+- `hooks/` - Custom React hooks
+- `lib/` - Utility functions and shared code
+- `public/` - Static assets
 
 ## Learn More
 
