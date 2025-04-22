@@ -1,13 +1,17 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Header from '@/components/layout/Header'
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google'
 import { OnboardingProvider } from '@/providers/OnboardingProvider'
 
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
-})
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  variable: '--font-plus-jakarta-sans',
+});
 
 export const metadata: Metadata = {
   title: 'Barber Booking App',
@@ -21,10 +25,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${plusJakartaSans.variable} font-sans antialiased`}>
         <OnboardingProvider>
-          <Header />
-          <main className="min-h-screen bg-background-light">
+          <main className="min-h-screen bg-white">
             {children}
           </main>
         </OnboardingProvider>

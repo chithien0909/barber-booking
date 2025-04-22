@@ -1,3 +1,5 @@
+'use client';
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { User, Mail, Phone, Bell, LogOut, Edit2, Lock } from 'lucide-react';
 import Link from 'next/link';
